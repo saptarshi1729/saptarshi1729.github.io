@@ -31,10 +31,21 @@
             }
         }
     </script>
+
+    <style>
+        /* Force hardware acceleration for smooth scroll on older Safari */
+        html { -webkit-overflow-scrolling: touch; }
+        
+        /* Fix Glassmorphism on Safari */
+        .safari-blur {
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+        }
+    </style>
 </head>
 <body class="bg-slate-900 text-slate-400 font-sans antialiased selection:bg-teal-400 selection:text-slate-900">
 
-    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+    <nav class="fixed w-full z-50 bg-slate-900/90 safari-blur border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" class="text-teal-400 font-mono font-bold text-lg hover:text-teal-300 transition-colors">
                 <span class="text-slate-100">&lt;</span>Saptarshi<span class="text-slate-100">/&gt;</span>
@@ -166,24 +177,24 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-sm">
                 <div class="bg-slate-900 p-6 rounded hover:-translate-y-2 transition-transform duration-300 border border-slate-800 hover:border-teal-400/50">
                     <h3 class="text-teal-400 mb-4 flex items-center"><i class="fas fa-terminal mr-3"></i>Languages</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-3 py-1 bg-slate-800 rounded text-slate-300">Java</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded text-slate-300">C++</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded text-slate-300">Python</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded text-slate-300">Golang</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded text-slate-300">Kotlin</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded text-slate-300">Scala</span>
+                    <div class="flex flex-wrap -m-1">
+                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Java</span>
+                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">C++</span>
+                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Python</span>
+                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Golang</span>
+                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Kotlin</span>
+                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Scala</span>
                     </div>
                 </div>
 
                 <div class="bg-slate-900 p-6 rounded hover:-translate-y-2 transition-transform duration-300 border border-slate-800 hover:border-teal-400/50">
                     <h3 class="text-teal-400 mb-4 flex items-center"><i class="fas fa-server mr-3"></i>Core Tech</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-3 py-1 bg-slate-800 rounded text-slate-300">Distributed Systems</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded text-slate-300">CloudSQL</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded text-slate-300">MySQL</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded text-slate-300">MongoDB</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded text-slate-300">Hyperledger</span>
+                    <div class="flex flex-wrap -m-1">
+                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Distributed Systems</span>
+                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">CloudSQL</span>
+                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">MySQL</span>
+                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">MongoDB</span>
+                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Hyperledger</span>
                     </div>
                 </div>
 
@@ -222,7 +233,7 @@
                     <p class="text-slate-400 mt-4 mb-6 text-sm">
                         Developed a custom Time Series Analysis model using SARIMA and FBProphet to detect price trends in vegetable markets. Delivered reliable forecasting solutions for market analysis.
                     </p>
-                    <div class="font-mono text-xs text-slate-500 flex gap-4">
+                    <div class="font-mono text-xs text-slate-500 flex space-x-4">
                         <span>Python</span>
                         <span>SARIMA</span>
                         <span>Data Viz</span>
@@ -234,7 +245,7 @@
                     <p class="text-slate-400 mt-4 mb-6 text-sm">
                         Built an ML model to predict health factors and determine contract suitability. Utilized Linear Regression, SVM, Random Forest, and CNNs for high-accuracy predictions.
                     </p>
-                    <div class="font-mono text-xs text-slate-500 flex gap-4">
+                    <div class="font-mono text-xs text-slate-500 flex space-x-4">
                         <span>TensorFlow</span>
                         <span>CNN</span>
                         <span>SVM</span>
@@ -251,7 +262,7 @@
             <p class="text-slate-400 text-lg mb-12">
                 I'm currently focused on building the future of database orchestration at Google. My inbox is open for interesting technical discussions or just to say hi.
             </p>
-            <div class="flex justify-center gap-6">
+            <div class="flex justify-center space-x-6">
                 <a href="mailto:saptarshi2015on@gmail.com" class="text-2xl text-slate-400 hover:text-teal-400 transition-colors"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/saptarshi1729" target="_blank" class="text-2xl text-slate-400 hover:text-teal-400 transition-colors"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/saptarshi-mukherjee-52660616b" target="_blank" class="text-2xl text-slate-400 hover:text-teal-400 transition-colors"><i class="fab fa-linkedin"></i></a>
