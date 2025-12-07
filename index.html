@@ -278,7 +278,10 @@
 
     <footer class="py-6 text-center text-slate-500 font-mono text-xs">
         <p>Designed & Built with Agentic AI Workflow.</p>
-        <p class="mt-2">&copy; 2025 Saptarshi Mukherjee</p>
+        <p class="mt-2">&copy; <span id="current-year"></span> Saptarshi Mukherjee</p>
+        <script>
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
     </footer>
 
 </body>
