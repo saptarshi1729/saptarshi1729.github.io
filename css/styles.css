@@ -2,7 +2,8 @@
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-    background-color: #0f172a; /* Slate 900 */
+    background-color: #0f172a;
+    /* Slate 900 */
 }
 
 ::-webkit-scrollbar-track {
@@ -10,13 +11,15 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #1e293b; /* Slate 800 */
+    background-color: #1e293b;
+    /* Slate 800 */
     border-radius: 5px;
     border: 2px solid #0f172a;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #334155; /* Slate 700 */
+    background-color: #334155;
+    /* Slate 700 */
 }
 
 /* Base global styles */
@@ -26,7 +29,8 @@ html {
 }
 
 body {
-    scrollbar-width: thin; /* Firefox */
+    scrollbar-width: thin;
+    /* Firefox */
     scrollbar-color: #1e293b #0f172a;
 }
 
@@ -36,4 +40,12 @@ body {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Text Glow Effect */
+.hover-glow:hover,
+.group:hover .hover-glow {
+    text-shadow: 0 0 10px rgba(45, 212, 191, 0.5), 0 0 20px rgba(45, 212, 191, 0.3);
+    color: #2dd4bf;
+    /* Ensure it stays/turns teal */
 }
