@@ -1,0 +1,39 @@
+/* Custom Scrollbar for Webkit (Chrome/Safari/Edge) */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #0f172a; /* Slate 900 */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1e293b; /* Slate 800 */
+    border-radius: 5px;
+    border: 2px solid #0f172a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #334155; /* Slate 700 */
+}
+
+/* Base global styles */
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #1e293b #0f172a;
+}
+
+/* Utility for glass effects if Tailwind backdrop-blur isn't enough */
+.glass-panel {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}

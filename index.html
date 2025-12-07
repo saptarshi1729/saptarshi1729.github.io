@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Saptarshi Mukherjee - Software Engineer III at Google. Specialist in Distributed Systems, CloudSQL, and Storage.">
-    <title>Saptarshi Mukherjee | Software Engineer</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Saptarshi Mukherjee - Software Engineer III at Google. Specialist in Distributed Systems, CloudSQL, and Scalability.">
+    <title>Saptarshi Mukherjee | Software Engineer III</title>
 
+    <!-- Tailwind CSS (via CDN for speed/simplicity as requested) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -19,270 +32,382 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         mono: ['JetBrains Mono', 'monospace'],
-                        artistic: ['Playfair Display', 'serif'], // New artistic font
                     },
                     colors: {
-                        slate: {
-                            850: '#1e293b',
-                            900: '#0f172a', 
-                            950: '#020617', 
+                        console: {
+                            dark: '#0f172a',    /* Slate 900 */
+                            darker: '#020617',  /* Slate 950 */
+                            dim: '#1e293b',     /* Slate 800 */
+                            text: '#cbd5e1',    /* Slate 300 */
+                            muted: '#64748b',   /* Slate 500 */
+                        },
+                        terminal: {
+                            accent: '#2dd4bf',  /* Teal 400 */
+                            secondary: '#38bdf8', /* Sky 400 */
                         }
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px)",
                     }
                 }
             }
         }
     </script>
-
-    <style>
-        html { -webkit-overflow-scrolling: touch; }
-        .safari-blur {
-            -webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(12px);
-        }
-    </style>
 </head>
-<body class="bg-slate-900 text-slate-400 font-sans antialiased selection:bg-teal-400 selection:text-slate-900">
 
-    <nav class="fixed w-full z-50 bg-slate-900/90 safari-blur border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-teal-400 font-mono font-bold text-lg hover:text-teal-300 transition-colors">
-                <span class="text-slate-100">&lt;</span>Saptarshi<span class="text-slate-100">/&gt;</span>
+<body
+    class="bg-console-dark text-console-text font-sans antialiased selection:bg-terminal-accent selection:text-console-darker relative">
+
+    <!-- Background Grid Effect -->
+    <div class="fixed inset-0 bg-[size:50px_50px] bg-grid-pattern opacity-[0.03] pointer-events-none z-0"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-mono font-bold text-lg group">
+                <span class="text-terminal-accent">&lt;</span><span
+                    class="text-white group-hover:text-terminal-accent transition-colors">Saptarshi</span><span
+                    class="text-terminal-accent">/&gt;</span>
             </a>
-            <div class="hidden md:flex space-x-8 font-mono text-sm">
-                <a href="#about" class="hover:text-teal-400 transition-colors">About</a>
-                <a href="#experience" class="hover:text-teal-400 transition-colors">Experience</a>
-                <a href="#skills" class="hover:text-teal-400 transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-teal-400 transition-colors">Projects</a>
+
+            <div class="hidden md:flex space-x-8 font-mono text-sm text-console-muted">
+                <a href="#about" class="hover:text-terminal-accent transition-colors">01. About</a>
+                <a href="#experience" class="hover:text-terminal-accent transition-colors">02. Experience</a>
+                <a href="#skills" class="hover:text-terminal-accent transition-colors">03. Skills</a>
+                <a href="#projects" class="hover:text-terminal-accent transition-colors">04. Projects</a>
             </div>
-            <a href="#contact" class="px-4 py-2 border border-teal-400 text-teal-400 font-mono text-sm rounded hover:bg-teal-400/10 transition-colors">
-                Contact
+
+            <a href="#contact"
+                class="px-4 py-2 border border-terminal-accent text-terminal-accent font-mono text-xs rounded hover:bg-terminal-accent/10 transition-colors">
+                Get In Touch
             </a>
         </div>
     </nav>
 
-    <header id="hero" class="min-h-screen flex items-center justify-center pt-24 md:pt-16">
-        <div class="max-w-5xl mx-auto px-6 w-full flex flex-col md:flex-row items-center md:items-start gap-12">
-            
-            <div class="flex-shrink-0">
-                <img src="image_0.jpeg" alt="Saptarshi Mukherjee" class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-slate-800 shadow-xl object-cover">
+    <!-- Hero Section (Z-Pattern) -->
+    <header id="hero" class="relative min-h-screen flex items-center justify-center pt-20 z-10">
+        <div class="max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center justify-between gap-12">
+
+            <!-- Left: Intro & Name -->
+            <div class="flex-1 text-center md:text-left space-y-6">
+                <p class="font-mono text-terminal-accent">Hi, I am</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight">
+                    Saptarshi Mukherjee.
+                </h1>
+                <h2 class="text-3xl md:text-5xl font-bold text-console-muted">
+                    I build distributed systems at scale.
+                </h2>
+                <p class="max-w-xl text-lg text-console-text leading-relaxed mx-auto md:mx-0 pt-4">
+                    Software Engineer III at <strong class="text-white">Google</strong>. Currently orchestrating the
+                    <span class="text-terminal-accent font-mono">CloudSQL Control Plane</span>.
+                    <br class="mb-4 block">
+                    Architecting high-availability systems at infinite scale. <br>
+                    Educator at heart. Researcher in <span class="text-white">Edge Computing</span>, <span
+                        class="text-white">Blockchain</span>, and <span class="text-white">Graph Algorithms</span>.
+                </p>
+
+                <div class="pt-8 flex flex-wrap gap-4 justify-center md:justify-start font-mono">
+                    <a href="#experience"
+                        class="px-6 py-3 bg-terminal-accent text-console-darker font-bold rounded hover:bg-teal-300 transition-transform hover:-translate-y-1">
+                        Check My Work
+                    </a>
+
+                </div>
             </div>
 
-            <div class="flex-grow text-center md:text-left">
-                <p class="font-mono text-teal-400 mb-4 text-lg">Hi, here is</p>
-                
-                <h1 class="text-5xl md:text-7xl font-bold text-slate-100 tracking-tight mb-6">
-                    Saptarshi Mukherjee
-                </h1>
+            <!-- Right: Statistics & Tagline (Visual/Artistic) -->
+            <div class="flex-1 flex flex-col items-center md:items-end justify-center space-y-8">
+                <!-- Profile Image with 'Status' Ring -->
+                <div class="relative group">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-terminal-accent to-blue-600 rounded-full opacity-25 group-hover:opacity-75 blur transition duration-500">
+                    </div>
+                    <img src="image_0.jpeg" alt="Saptarshi"
+                        class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-console-dark bg-console-dim">
 
-                <h2 class="font-artistic italic text-2xl md:text-3xl text-slate-300 mb-10 md:text-right leading-tight">
-                    Loves building resilient systems <br class="hidden md:block"> at Google scale!
-                </h2>
+                    <!-- Floating 'Badge' -->
+                    <div
+                        class="absolute bottom-4 right-4 bg-console-darker border border-terminal-accent px-4 py-2 rounded-full shadow-xl flex items-center space-x-2">
+                        <span class="relative flex h-3 w-3">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-terminal-accent opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-terminal-accent"></span>
+                        </span>
+                        <span class="font-mono text-xs font-bold text-white">System Online</span>
+                    </div>
+                </div>
 
-                <p class="max-w-xl text-lg mb-10 text-slate-400 leading-relaxed mx-auto md:mx-0">
-                    I am a <strong>Software Engineer III</strong> at Google Cloud, currently orchestrating the <strong class="text-teal-400">CloudSQL Control Plane</strong>. 
-                    Previously, I architected storage solutions for Persistent Disks.
-                    <br><br>
-                    <span class="font-mono text-sm text-slate-500">
-                        <i class="fas fa-medal mr-2"></i> Bosch Route Optimisation Gold Medalist <br>
-                        <i class="fas fa-code mr-2"></i> Codeforces Master (Max 2119)
-                    </span>
-                </p>
-                
-                <a href="#experience" class="inline-block px-8 py-4 border border-teal-400 text-teal-400 font-mono rounded hover:bg-teal-400/10 transition-all duration-300">
-                    Check out my work
-                </a>
+                <!-- Artistic Tagline Block -->
+                <div
+                    class="bg-console-dim/50 p-6 rounded-lg border-l-4 border-terminal-accent backdrop-blur-sm max-w-sm">
+                    <p class="font-mono text-sm text-terminal-accent mb-2">$ cat philosophy.txt</p>
+                    <p class="italic text-white text-lg">
+                        "Loves building resilient systems at Google scale!"
+                    </p>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="experience" class="py-24">
+    <!-- Experience Section (Timeline) -->
+    <section id="experience" class="py-24 z-10 relative">
         <div class="max-w-4xl mx-auto px-6">
-            <div class="flex items-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-100">Where I've Worked</h2>
-                <div class="h-px bg-slate-700 flex-grow ml-6"></div>
+            <div class="flex items-center mb-16 gap-4">
+                <span class="font-mono text-terminal-accent text-xl">02.</span>
+                <h2 class="text-3xl font-bold text-white">Where I've Worked</h2>
+                <div class="h-px bg-console-dim flex-grow"></div>
             </div>
 
-            <div class="space-y-12">
-                <div class="relative pl-8 border-l border-slate-700">
-                    <div class="absolute -left-1.5 top-0 w-3 h-3 bg-teal-400 rounded-full"></div>
-                    <div class="mb-2">
-                        <h3 class="text-xl font-bold text-slate-100">Software Engineer III <span class="text-teal-400">@ Google</span></h3>
-                        <p class="font-mono text-sm text-slate-500 mb-4">Aug 2021 - Present</p>
+            <div class="relative border-l border-console-dim ml-3 md:ml-6 space-y-16">
+
+                <!-- Google (Current) -->
+                <div class="relative pl-8 group">
+                    <span
+                        class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-terminal-accent ring-4 ring-console-dark group-hover:ring-terminal-accent/20 transition-all"></span>
+
+                    <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white">Software Engineer III <span
+                                class="text-terminal-accent">@ Google</span></h3>
+                        <span class="font-mono text-sm text-console-muted">Aug 2021 — Present</span>
                     </div>
-                    
-                    <div class="bg-slate-800/50 p-6 rounded-lg mb-6 hover:bg-slate-800 transition-colors">
-                        <h4 class="text-slate-200 font-bold mb-2">Current: CloudSQL Control Plane</h4>
-                        <ul class="list-none space-y-2 text-sm">
-                            <li class="relative pl-6">
-                                <span class="absolute left-0 text-teal-400">▹</span>
-                                Orchestrating Admin API requests and ensuring high availability for Google's managed database service.
+
+                    <div class="space-y-6">
+                        <!-- Role 1 -->
+                        <div
+                            class="bg-console-dim/30 p-6 rounded border border-transparent hover:border-console-dim transition-all">
+                            <h4 class="text-white font-semibold mb-2 flex items-center"><i
+                                    class="fas fa-server text-terminal-accent mr-3 text-sm"></i>CloudSQL Control Plane
+                            </h4>
+                            <ul class="space-y-2 font-mono text-sm text-console-text">
+                                <li class="flex items-start"><span class="text-terminal-accent mr-2">▹</span>
+                                    Orchestrating Admin API requests for managed database services.</li>
+                                <li class="flex items-start"><span class="text-terminal-accent mr-2">▹</span> Ensuring
+                                    high availability and scalability of the control plane.</li>
+                                <li class="flex items-start"><span class="text-terminal-accent mr-2">▹</span> Reducing
+                                    failure domains in distributed workflows.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Role 2 -->
+                        <div
+                            class="bg-console-dim/30 p-6 rounded border border-transparent hover:border-console-dim transition-all">
+                            <h4 class="text-white font-semibold mb-2 flex items-center"><i
+                                    class="fas fa-hdd text-terminal-accent mr-3 text-sm"></i>Persistent Disks (AsyncPD)
+                            </h4>
+                            <ul class="space-y-2 font-mono text-sm text-console-text">
+                                <li class="flex items-start"><span class="text-terminal-accent mr-2">▹</span> Redesigned
+                                    scheduling architecture to remove Single Points of Failure (SPOF).</li>
+                                <li class="flex items-start"><span class="text-terminal-accent mr-2">▹</span> Engineered
+                                    AsyncPD for continuous data replication with low RPO/RTO.</li>
+                                <li class="flex items-start"><span class="text-terminal-accent mr-2">▹</span> Led
+                                    "Podification" project to optimize binary deployment releases.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unacademy -->
+                <div class="relative pl-8 group">
+                    <span
+                        class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-console-muted ring-4 ring-console-dark group-hover:ring-console-text transition-all"></span>
+
+                    <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white">Mentor <span class="text-terminal-accent">@
+                                Unacademy</span></h3>
+                        <span class="font-mono text-sm text-console-muted">Jan 2021 — Jul 2021</span>
+                    </div>
+
+                    <ul class="space-y-2 font-mono text-sm text-console-text max-w-2xl">
+                        <li class="flex items-start"><span class="text-terminal-accent mr-2">▹</span> Created advanced
+                            mathematical proof content (Educator).</li>
+                        <li class="flex items-start"><span class="text-terminal-accent mr-2">▹</span> Conducted live
+                            video sessions for competitive programming students.</li>
+                    </ul>
+                </div>
+
+                <!-- Needl.ai -->
+                <div class="relative pl-8 group">
+                    <span
+                        class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-console-muted ring-4 ring-console-dark group-hover:ring-console-text transition-all"></span>
+
+                    <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white">Software Intern <span class="text-terminal-accent">@
+                                Needl.ai</span></h3>
+                        <span class="font-mono text-sm text-console-muted">Summer 2020</span>
+                    </div>
+
+                    <ul class="space-y-2 font-mono text-sm text-console-text max-w-2xl">
+                        <li class="flex items-start"><span class="text-terminal-accent mr-2">▹</span> Implemented
+                            Knowledge Graphs to assimilate disparate data sources.</li>
+                        <li class="flex items-start"><span class="text-terminal-accent mr-2">▹</span> Built complex
+                            query answering pipelines using graph algorithms.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section (Terminal Cards) -->
+    <section id="skills" class="py-24 z-10 relative bg-console-dim/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center mb-16 gap-4 justify-center md:justify-start">
+                <span class="font-mono text-terminal-accent text-xl">03.</span>
+                <h2 class="text-3xl font-bold text-white">Command Center</h2>
+                <div class="h-px bg-console-dim flex-grow max-w-xs hidden md:block"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="bg-console-dark border border-console-dim rounded-lg overflow-hidden hover:border-terminal-accent/50 transition-colors group">
+                    <div class="bg-console-dim px-4 py-2 flex items-center gap-2 border-b border-console-dim">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="font-mono text-xs text-console-muted ml-auto">languages.exe</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex flex-wrap gap-2 font-mono text-sm text-terminal-accent">
+                            <span class="px-2 py-1 bg-terminal-accent/10 rounded">Java</span>
+                            <span class="px-2 py-1 bg-terminal-accent/10 rounded">C++</span>
+                            <span class="px-2 py-1 bg-terminal-accent/10 rounded">Python</span>
+                            <span class="px-2 py-1 bg-terminal-accent/10 rounded">Golang</span>
+                            <span class="px-2 py-1 bg-terminal-accent/10 rounded">Kotlin</span>
+                            <span class="px-2 py-1 bg-terminal-accent/10 rounded">Scala</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-console-dark border border-console-dim rounded-lg overflow-hidden hover:border-terminal-accent/50 transition-colors group">
+                    <div class="bg-console-dim px-4 py-2 flex items-center gap-2 border-b border-console-dim">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="font-mono text-xs text-console-muted ml-auto">systems.sh</span>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 font-mono text-sm text-console-text">
+                            <li><span class="text-terminal-accent">➜</span> Distributed Systems</li>
+                            <li><span class="text-terminal-accent">➜</span> CloudSQL / MySQL</li>
+                            <li><span class="text-terminal-accent">➜</span> MongoDB</li>
+                            <li><span class="text-terminal-accent">➜</span> Hyperledger</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3: Achievements -->
+                <div
+                    class="bg-console-dark border border-console-dim rounded-lg overflow-hidden hover:border-terminal-accent/50 transition-colors group">
+                    <div class="bg-console-dim px-4 py-2 flex items-center gap-2 border-b border-console-dim">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        <span class="font-mono text-xs text-console-muted ml-auto">awards.log</span>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 font-mono text-sm text-console-text">
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-trophy text-yellow-500"></i> Codeforces Master (2119)
                             </li>
-                            <li class="relative pl-6">
-                                <span class="absolute left-0 text-teal-400">▹</span>
-                                Focusing on scalability and reliability of the control plane infrastructure.
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-star text-yellow-500"></i> Codechef 6-Star (2210)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fas fa-medal text-yellow-500"></i> Gold Medalist (Inter IIT)
                             </li>
                         </ul>
                     </div>
-
-                    <div class="bg-slate-800/50 p-6 rounded-lg hover:bg-slate-800 transition-colors">
-                        <h4 class="text-slate-200 font-bold mb-2">Previous: Persistent Disks (AsyncPD)</h4>
-                        <ul class="list-none space-y-2 text-sm">
-                            <li class="relative pl-6">
-                                <span class="absolute left-0 text-teal-400">▹</span>
-                                Redesigned scheduling architecture to remove Single Points of Failure (SPOF).
-                            </li>
-                            <li class="relative pl-6">
-                                <span class="absolute left-0 text-teal-400">▹</span>
-                                Engineered <strong>AsyncPD</strong> for continuous data replication with low RPO/RTO across geographies.
-                            </li>
-                            <li class="relative pl-6">
-                                <span class="absolute left-0 text-teal-400">▹</span>
-                                Led "Podification" project to restructure binary deployment release processes.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="relative pl-8 border-l border-slate-700">
-                    <div class="absolute -left-1.5 top-0 w-3 h-3 bg-slate-600 rounded-full"></div>
-                    <div class="mb-4">
-                        <h3 class="text-xl font-bold text-slate-100">Mentor <span class="text-teal-400">@ Unacademy</span></h3>
-                        <p class="font-mono text-sm text-slate-500">Jan 2021 - Jul 2021</p>
-                    </div>
-                    <ul class="list-none space-y-2 text-sm max-w-2xl">
-                        <li class="relative pl-6">
-                            <span class="absolute left-0 text-teal-400">▹</span>
-                            Created advanced mathematical proof content and conducted video sessions for students.
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="relative pl-8 border-l border-slate-700">
-                    <div class="absolute -left-1.5 top-0 w-3 h-3 bg-slate-600 rounded-full"></div>
-                    <div class="mb-4">
-                        <h3 class="text-xl font-bold text-slate-100">Software Intern <span class="text-teal-400">@ Needl.ai</span></h3>
-                        <p class="font-mono text-sm text-slate-500">Summer 2020</p>
-                    </div>
-                    <ul class="list-none space-y-2 text-sm max-w-2xl">
-                        <li class="relative pl-6">
-                            <span class="absolute left-0 text-teal-400">▹</span>
-                            Implemented Knowledge Graphs to assimilate disparate data sources for complex query answering.
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-24 bg-slate-850">
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 z-10 relative">
         <div class="max-w-4xl mx-auto px-6">
-            <div class="flex items-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-100">Technical Arsenal</h2>
-                <div class="h-px bg-slate-700 flex-grow ml-6"></div>
+            <div class="flex items-center mb-16 gap-4">
+                <span class="font-mono text-terminal-accent text-xl">04.</span>
+                <h2 class="text-3xl font-bold text-white">Featured Projects</h2>
+                <div class="h-px bg-console-dim flex-grow"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-mono text-sm">
-                <div class="bg-slate-900 p-6 rounded hover:-translate-y-2 transition-transform duration-300 border border-slate-800 hover:border-teal-400/50">
-                    <h3 class="text-teal-400 mb-4 flex items-center"><i class="fas fa-terminal mr-3"></i>Languages</h3>
-                    <div class="flex flex-wrap -m-1">
-                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Java</span>
-                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">C++</span>
-                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Python</span>
-                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Golang</span>
-                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Kotlin</span>
-                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Scala</span>
+            <div class="grid gap-8">
+                <!-- Project 1 -->
+                <div
+                    class="group relative bg-console-dim/20 rounded-xl overflow-hidden border border-console-dim hover:border-terminal-accent/30 transition-all p-8 flex flex-col md:flex-row gap-8">
+                    <div class="md:w-2/3">
+                        <p class="font-mono text-terminal-accent text-sm mb-2">Machine Learning</p>
+                        <h3
+                            class="text-2xl font-bold text-white mb-4 group-hover:text-terminal-accent transition-colors">
+                            Vegetable Price Analysis</h3>
+                        <p class="text-console-text mb-6">
+                            Developed a custom Time Series Analysis model using <span
+                                class="text-terminal-accent">SARIMA</span> and <span
+                                class="text-terminal-accent">FBProphet</span> to detect price trends in vegetable
+                            markets. Delivered reliable forecasting solutions for complex market data.
+                        </p>
+                        <div class="flex flex-wrap gap-4 font-mono text-xs text-console-muted">
+                            <span>Python</span>
+                            <span>SARIMA</span>
+                            <span>Data Viz</span>
+                            <span>FBProphet</span>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-1/3 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
+                        <i
+                            class="fas fa-chart-line text-8xl text-console-dim group-hover:text-terminal-accent transition-colors"></i>
                     </div>
                 </div>
 
-                <div class="bg-slate-900 p-6 rounded hover:-translate-y-2 transition-transform duration-300 border border-slate-800 hover:border-teal-400/50">
-                    <h3 class="text-teal-400 mb-4 flex items-center"><i class="fas fa-server mr-3"></i>Core Tech</h3>
-                    <div class="flex flex-wrap -m-1">
-                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Distributed Systems</span>
-                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">CloudSQL</span>
-                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">MySQL</span>
-                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">MongoDB</span>
-                        <span class="m-1 px-3 py-1 bg-slate-800 rounded text-slate-300">Hyperledger</span>
+                <!-- Project 2 -->
+                <div
+                    class="group relative bg-console-dim/20 rounded-xl overflow-hidden border border-console-dim hover:border-terminal-accent/30 transition-all p-8 flex flex-col md:flex-row gap-8">
+                    <div class="md:w-2/3">
+                        <p class="font-mono text-terminal-accent text-sm mb-2">Deep Learning</p>
+                        <h3
+                            class="text-2xl font-bold text-white mb-4 group-hover:text-terminal-accent transition-colors">
+                            Medical Insurance Evaluator</h3>
+                        <p class="text-console-text mb-6">
+                            Built an ML model to predict health factors and determine contract suitability. Utilized
+                            Linear Regression, SVM, Random Forest, and CNNs for high-accuracy predictions.
+                        </p>
+                        <div class="flex flex-wrap gap-4 font-mono text-xs text-console-muted">
+                            <span>TensorFlow</span>
+                            <span>CNN</span>
+                            <span>SVM</span>
+                            <span>RandomForest</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="bg-slate-900 p-6 rounded hover:-translate-y-2 transition-transform duration-300 border border-slate-800 hover:border-teal-400/50">
-                    <h3 class="text-teal-400 mb-4 flex items-center"><i class="fas fa-brain mr-3"></i>AI / ML</h3>
-                    <ul class="space-y-2">
-                        <li><span class="text-teal-400">▹</span> TensorFlow & Keras</li>
-                        <li><span class="text-teal-400">▹</span> Time Series Analysis (SARIMA, FBProphet)</li>
-                        <li><span class="text-teal-400">▹</span> Computer Vision</li>
-                    </ul>
-                </div>
-
-                <div class="bg-slate-900 p-6 rounded hover:-translate-y-2 transition-transform duration-300 border border-slate-800 hover:border-teal-400/50">
-                    <h3 class="text-teal-400 mb-4 flex items-center"><i class="fas fa-trophy mr-3"></i>Achievements</h3>
-                    <ul class="space-y-2">
-                        <li><span class="text-teal-400">▹</span> Codeforces Master (Rating 2119)</li>
-                        <li><span class="text-teal-400">▹</span> Codechef 6-Star (Rating 2210)</li>
-                        <li><span class="text-teal-400">▹</span> Bosch Route Optimisation Gold Medalist</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-24">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="flex items-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-100">Featured Projects</h2>
-                <div class="h-px bg-slate-700 flex-grow ml-6"></div>
-            </div>
-
-            <div class="grid gap-6">
-                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-800 hover:border-teal-400/30 transition-all group">
-                    <h3 class="text-xl font-bold text-slate-100 group-hover:text-teal-400 transition-colors">Vegetable Price Analysis</h3>
-                    <p class="text-slate-400 mt-4 mb-6 text-sm">
-                        Developed a custom Time Series Analysis model using SARIMA and FBProphet to detect price trends in vegetable markets. Delivered reliable forecasting solutions for market analysis.
-                    </p>
-                    <div class="font-mono text-xs text-slate-500 flex space-x-4">
-                        <span>Python</span>
-                        <span>SARIMA</span>
-                        <span>Data Viz</span>
-                    </div>
-                </div>
-
-                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-800 hover:border-teal-400/30 transition-all group">
-                    <h3 class="text-xl font-bold text-slate-100 group-hover:text-teal-400 transition-colors">Medical Insurance Contract Evaluator</h3>
-                    <p class="text-slate-400 mt-4 mb-6 text-sm">
-                        Built an ML model to predict health factors and determine contract suitability. Utilized Linear Regression, SVM, Random Forest, and CNNs for high-accuracy predictions.
-                    </p>
-                    <div class="font-mono text-xs text-slate-500 flex space-x-4">
-                        <span>TensorFlow</span>
-                        <span>CNN</span>
-                        <span>SVM</span>
+                    <div
+                        class="md:w-1/3 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
+                        <i
+                            class="fas fa-heartbeat text-8xl text-console-dim group-hover:text-terminal-accent transition-colors"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 text-center">
-        <div class="max-w-2xl mx-auto px-6">
-            <p class="font-mono text-teal-400 mb-4">What's Next?</p>
-            <h2 class="text-4xl md:text-5xl font-bold text-slate-100 mb-6">Get In Touch</h2>
-            <p class="text-slate-400 text-lg mb-12">
-                I'm currently focused on building the future of database orchestration at Google. My inbox is open for interesting technical discussions or just to say hi.
-            </p>
-            <div class="flex justify-center space-x-6">
-                <a href="mailto:saptarshi2015on@gmail.com" class="text-2xl text-slate-400 hover:text-teal-400 transition-colors"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/saptarshi1729" target="_blank" class="text-2xl text-slate-400 hover:text-teal-400 transition-colors"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/saptarshi-mukherjee-52660616b" target="_blank" class="text-2xl text-slate-400 hover:text-teal-400 transition-colors"><i class="fab fa-linkedin"></i></a>
-            </div>
+    <!-- Footer -->
+    <footer class="py-8 text-center text-console-muted font-mono text-xs relative z-10 glass-panel border-t-0">
+        <div class="flex justify-center space-x-8 mb-6">
+            <a href="mailto:saptarshi2015on@gmail.com" class="text-xl hover:text-terminal-accent transition-colors"><i
+                    class="fas fa-envelope"></i></a>
+            <a href="https://github.com/saptarshi1729" target="_blank"
+                class="text-xl hover:text-terminal-accent transition-colors"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/saptarshi-mukherjee-52660616b" target="_blank"
+                class="text-xl hover:text-terminal-accent transition-colors"><i class="fab fa-linkedin"></i></a>
         </div>
-    </section>
-
-    <footer class="py-6 text-center text-slate-500 font-mono text-xs">
-        <p>Designed & Built with Agentic AI Workflow.</p>
-        <p class="mt-2">&copy; <span id="current-year"></span> Saptarshi Mukherjee</p>
-        <script>
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-        </script>
+        <p>Designed & Built by <span class="text-terminal-accent">Saptarshi Mukherjee</span></p>
+        <p class="mt-2 text-console-dark/50">&copy; <span id="current-year"></span> All rights reserved.</p>
     </footer>
 
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
 </body>
+
 </html>
